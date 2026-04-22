@@ -8,7 +8,7 @@ public interface IDiscountService
 
 public class ParkingService
 {
-    private readonly IDiscountService discountService; //give the service at the class ou un truc dans le genre
+    private readonly IDiscountService discountService; //give the service at the class ou un truc dans le genre /ELiott : XD
 
     public ParkingService(IDiscountService discountService)
     {
@@ -20,7 +20,7 @@ public class ParkingService
         double fee;
 
         if (vehicleType == "standard")
-            if ((hours >= 1) && (hours < 3))
+            if ((hours >= 1) && (hours <= 3))
                 fee = hours * 4.0;
             else if (hours >= 4)
                 fee = hours * 3.0;
